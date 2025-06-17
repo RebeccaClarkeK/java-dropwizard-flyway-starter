@@ -92,7 +92,10 @@ SET first_name = CONCAT(UPPER(LEFT(first_name, 1)), LOWER(SUBSTRING(first_name, 
 DELETE FROM Loans
 WHERE datediff(return_date, loan_date) > 30;
 
-CREATE INDEX idx_genre_author_publisher ON Books (genre, author, publisher);
+
+CREATE INDEX idx_genre ON Books (genre);
+CREATE INDEX idx_author ON Books (author);
+CREATE INDEX idx_publisher ON Books (publisher);
 
 CREATE UNIQUE INDEX idx_email_unique ON Members (email);
 
