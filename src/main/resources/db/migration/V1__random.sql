@@ -1,3 +1,15 @@
+CREATE TABLE Books (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	title VARCHAR(255) NOT NULL,
+	author VARCHAR(255) NOT NULL,
+	publisher VARCHAR(255) NOT NULL,
+	isbn VARCHAR(255) NOT NULL,
+	publication_year YEAR NOT NULL,
+	genre VARCHAR(255) NOT NULL,
+	available TINYINT(1) NOT NULL DEFAULT 1,
+	price DECIMAL(10,2) NOT NULL
+);
+
 INSERT INTO Books (title, author, publisher, isbn, publication_year, genre, available, price)
 VALUES ('Wonder 5', 'R.J. Palacio', 'Penguin', '0375869026', 2012, 'fiction', 1, 7.35);
 
