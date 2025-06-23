@@ -1,7 +1,5 @@
 package org.example.daos;
 
-import freemarker.core.JSONOutputFormat;
-
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
